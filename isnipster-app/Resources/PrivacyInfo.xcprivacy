@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- 隐私清单随资源打入应用包，声明数据用途与 required-reason API 使用原因。
+这是声明，不会自动拦截网络、限制采集或弹出权限框；实际行为由代码与系统权限决定。
+官方参考：https://developer.apple.com/documentation/bundleresources/describing-use-of-required-reason-api -->
+<plist version="1.0">
+<dict>
+	<!-- false 声明不将数据用于追踪；不是“应用完全不联网”的含义。 -->
+	<key>NSPrivacyTracking</key>
+	<false/>
+	<!-- 追踪域名列表为空；在线翻译的功能性域名与追踪域名不是同一个分类。 -->
+	<key>NSPrivacyTrackingDomains</key>
+	<array/>
+	<!-- 以下字典声明处理的数据类别及用途，与本地存储实现不是同一个配置项。 -->
+	<key>NSPrivacyCollectedDataTypes</key>
+	<array>
+		<dict>
+			<!-- 这里选择其他用户内容类别，描述功能处理的内容种类。 -->
+			<key>NSPrivacyCollectedDataType</key>
+			<string>NSPrivacyCollectedDataTypeOtherUserContent</string>
+			<!-- 声明该类别的数据不与用户身份关联；此字段本身不会执行匿名化。 -->
+			<key>NSPrivacyCollectedDataTypeLinked</key>
+			<false/>
+			<!-- 声明该类别不用于追踪；此字段不控制 URLSession 是否发请求。 -->
+			<key>NSPrivacyCollectedDataTypeTracking</key>
+			<false/>
+			<!-- 用途为应用功能；具体发送哪些文本仍由用户选择的翻译来源和请求代码决定。 -->
+			<key>NSPrivacyCollectedDataTypePurposes</key>
+			<array>
+				<string>NSPrivacyCollectedDataTypePurposeAppFunctionality</string>
+			</array>
+		</dict>
+	</array>
+	<!-- 声明使用需要说明原因的系统 API；本项目偏好配置使用 UserDefaults。 -->
+	<key>NSPrivacyAccessedAPITypes</key>
+	<array>
+		<dict>
+			<!-- UserDefaults API 类别；下面的原因码必须对应实际用途。 -->
+			<key>NSPrivacyAccessedAPIType</key>
+			<string>NSPrivacyAccessedAPICategoryUserDefaults</string>
+			<!-- CA92.1 是清单中选择的使用原因码；具体允许范围以官方 required-reason API 文档为准。 -->
+			<key>NSPrivacyAccessedAPITypeReasons</key>
+			<array>
+				<string>CA92.1</string>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>

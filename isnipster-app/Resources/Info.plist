@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- 应用元数据，类似 Java JAR 的 Manifest。$(...) 由 Xcode 构建设置替换，不是 Swift 字符串插值。
+系统读取打包后的 plist；只修改此文件并不会动态更新正在运行的进程。
+官方参考：https://developer.apple.com/documentation/bundleresources/information-property-list -->
+<plist version="1.0">
+<dict>
+	<!-- 默认开发语言地区；这里不直接实现 AppText 的中英文文案映射。 -->
+	<key>CFBundleDevelopmentRegion</key>
+	<string>zh_CN</string>
+	<!-- 用户看到的应用名，取自配置中的 APP_DISPLAY_NAME，因此 Debug 与 Release 可显示不同名称。 -->
+	<key>CFBundleDisplayName</key>
+	<string>$(APP_DISPLAY_NAME)</string>
+	<!-- 应用所属类别，这里声明为工具类；不决定菜单栏或窗口行为。 -->
+	<key>LSApplicationCategoryType</key>
+	<string>public.app-category.utilities</string>
+	<!-- 应用包内实际可执行文件的名字，由 Xcode 产物设置填入。 -->
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<!-- 应用身份标识；参与系统偏好、权限识别和签名，不是可随意更换的显示名。 -->
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<!-- Info.plist 结构版本；6.0 与本项目 Swift 6 语言版本没有关系。 -->
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<!-- 应用短名称，此处同样使用自定义的显示名变量。 -->
+	<key>CFBundleName</key>
+	<string>$(APP_DISPLAY_NAME)</string>
+	<!-- APPL 表示应用包；.app 本质是含可执行文件、资源与元数据的目录。 -->
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<!-- 面向用户的发布版本，例如 0.1.0；值来自 MARKETING_VERSION。 -->
+	<key>CFBundleShortVersionString</key>
+	<string>$(MARKETING_VERSION)</string>
+	<!-- 发版时填写固定日期（yyyy-MM-dd）；留空时“关于”页面显示“待发布”。 -->
+	<key>AppReleaseDate</key>
+	<string></string>
+	<!-- 内部构建编号；可在同一发布版本下递增，值来自 CURRENT_PROJECT_VERSION。 -->
+	<key>CFBundleVersion</key>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<!-- 最低可运行 macOS 版本；与编译时使用哪个 SDK 是不同概念。 -->
+	<key>LSMinimumSystemVersion</key>
+	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
+	<!-- 声明代理式应用，通常不在 Dock 显示；运行中 AppDelegate 仍可切换 activationPolicy 来呈现窗口。 -->
+	<key>LSUIElement</key>
+	<true/>
+	<!-- 声明支持高分辨率显示；实际选区仍必须正确转换 point 与 pixel，不能靠这个开关修复模糊。 -->
+	<key>NSHighResolutionCapable</key>
+	<true/>
+	<!-- 此处保存屏幕访问用途说明；文案本身不会请求或授予权限，实际访问仍经 CoreGraphics 与 ScreenCaptureKit。 -->
+	<key>NSScreenCaptureUsageDescription</key>
+	<string>iSnipster 仅在你主动截图、截图翻译或取色时读取所选屏幕区域。除非你主动复制或保存，内容只在本机内存中处理，不会上传。</string>
+	<!-- 包内可读版权元数据，不参与程序控制流程。 -->
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright © 2026 iSnipster</string>
+	<!-- 由 AppKit 的 NSApplication 管理应用事件循环；SwiftUI App 通过代理适配器接入生命周期。 -->
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+</dict>
+</plist>

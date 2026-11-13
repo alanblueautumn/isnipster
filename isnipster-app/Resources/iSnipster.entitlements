@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- 签名能力清单：列出沙盒内允许使用的系统能力，类似部署权限声明，不能代替 TCC 的用户授权。
+Xcode 的 CODE_SIGN_ENTITLEMENTS 指向这里；更改能力需要重新签名后才体现在应用上。
+官方参考：https://developer.apple.com/documentation/bundleresources/entitlements -->
+<plist version="1.0">
+<dict>
+	<!-- 启用 App Sandbox，限制文件与系统资源访问；不是屏幕录制授权开关。 -->
+	<key>com.apple.security.app-sandbox</key>
+	<true/>
+	<!-- 允许访问用户通过系统选择机制授予的文件；不表示可以任意读取整个磁盘。 -->
+	<key>com.apple.security.files.user-selected.read-write</key>
+	<true/>
+	<!-- 支持应用范围的安全书签，用于恢复用户授予的外部文件访问；使用时仍需配对 start/stop。 -->
+	<key>com.apple.security.files.bookmarks.app-scope</key>
+	<true/>
+	<!-- 允许沙盒应用发起出站连接，供在线翻译客户端使用；不等于允许监听任意入站端口。 -->
+	<key>com.apple.security.network.client</key>
+	<true/>
+</dict>
+</plist>

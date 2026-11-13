@@ -1,0 +1,526 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 60;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		100000000000000000000001 /* iSnipsterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000001 /* iSnipsterApp.swift */; };
+		100000000000000000000002 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000002 /* AppDelegate.swift */; };
+		100000000000000000000003 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000003 /* AppModel.swift */; };
+		100000000000000000000004 /* CompositionRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000004 /* CompositionRoot.swift */; };
+		100000000000000000000005 /* MenuBarContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000005 /* MenuBarContentView.swift */; };
+		100000000000000000000006 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000006 /* SettingsView.swift */; };
+		100000000000000000000007 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000010 /* Assets.xcassets */; };
+		100000000000000000000008 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000011 /* PrivacyInfo.xcprivacy */; };
+		100000000000000000000009 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000012 /* OnboardingView.swift */; };
+		100000000000000000000013 /* SettingsView+Clipboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000013 /* SettingsView+Clipboard.swift */; };
+		100000000000000000000014 /* SettingsComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000014 /* SettingsComponents.swift */; };
+		100000000000000000000015 /* HotKeyRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000015 /* HotKeyRecorder.swift */; };
+		100000000000000000000016 /* SettingsView+General.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000016 /* SettingsView+General.swift */; };
+		100000000000000000000017 /* SettingsView+Translation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000017 /* SettingsView+Translation.swift */; };
+		100000000000000000000018 /* SettingsView+Privacy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000018 /* SettingsView+Privacy.swift */; };
+		100000000000000000000019 /* SettingsView+Shortcuts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000019 /* SettingsView+Shortcuts.swift */; };
+		100000000000000000000020 /* SettingsView+About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000020 /* SettingsView+About.swift */; };
+		100000000000000000000021 /* AppShortcutAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000021 /* AppShortcutAction.swift */; };
+		100000000000000000000022 /* HotKeyDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000022 /* HotKeyDisplay.swift */; };
+		100000000000000000000023 /* AppShortcutStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000023 /* AppShortcutStore.swift */; };
+		100000000000000000000024 /* StatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000024 /* StatusBarController.swift */; };
+		100000000000000000000025 /* CaptureWorkflowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000025 /* CaptureWorkflowCoordinator.swift */; };
+		110000000000000000000001 /* iSnipsterCore in Frameworks */ = {isa = PBXBuildFile; productRef = 700000000000000000000001 /* iSnipsterCore */; };
+		110000000000000000000002 /* CaptureFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 700000000000000000000002 /* CaptureFeature */; };
+		110000000000000000000003 /* ImageEditorFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 700000000000000000000003 /* ImageEditorFeature */; };
+		110000000000000000000004 /* ImageTranslationFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 700000000000000000000004 /* ImageTranslationFeature */; };
+		110000000000000000000005 /* ClipboardFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 700000000000000000000005 /* ClipboardFeature */; };
+		110000000000000000000006 /* ColorPickerFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 700000000000000000000006 /* ColorPickerFeature */; };
+		110000000000000000000007 /* MacPlatform in Frameworks */ = {isa = PBXBuildFile; productRef = 700000000000000000000007 /* MacPlatform */; };
+		110000000000000000000008 /* TextTranslationFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 700000000000000000000008 /* TextTranslationFeature */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		200000000000000000000001 /* iSnipsterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iSnipsterApp.swift; sourceTree = "<group>"; };
+		200000000000000000000002 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		200000000000000000000003 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		200000000000000000000004 /* CompositionRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionRoot.swift; sourceTree = "<group>"; };
+		200000000000000000000005 /* MenuBarContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarContentView.swift; sourceTree = "<group>"; };
+		200000000000000000000006 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		200000000000000000000007 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		200000000000000000000008 /* iSnipster.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iSnipster.entitlements; sourceTree = "<group>"; };
+		200000000000000000000009 /* iSnipster Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iSnipster Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		200000000000000000000010 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		200000000000000000000011 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		200000000000000000000012 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		200000000000000000000013 /* SettingsView+Clipboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsView+Clipboard.swift"; sourceTree = "<group>"; };
+		200000000000000000000014 /* SettingsComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsComponents.swift; sourceTree = "<group>"; };
+		200000000000000000000015 /* HotKeyRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotKeyRecorder.swift; sourceTree = "<group>"; };
+		200000000000000000000016 /* SettingsView+General.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsView+General.swift"; sourceTree = "<group>"; };
+		200000000000000000000017 /* SettingsView+Translation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsView+Translation.swift"; sourceTree = "<group>"; };
+		200000000000000000000018 /* SettingsView+Privacy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsView+Privacy.swift"; sourceTree = "<group>"; };
+		200000000000000000000019 /* SettingsView+Shortcuts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsView+Shortcuts.swift"; sourceTree = "<group>"; };
+		200000000000000000000020 /* SettingsView+About.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsView+About.swift"; sourceTree = "<group>"; };
+		200000000000000000000021 /* AppShortcutAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppShortcutAction.swift; sourceTree = "<group>"; };
+		200000000000000000000022 /* HotKeyDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotKeyDisplay.swift; sourceTree = "<group>"; };
+		200000000000000000000023 /* AppShortcutStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppShortcutStore.swift; sourceTree = "<group>"; };
+		200000000000000000000024 /* StatusBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarController.swift; sourceTree = "<group>"; };
+		200000000000000000000025 /* CaptureWorkflowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureWorkflowCoordinator.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		300000000000000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				110000000000000000000001 /* iSnipsterCore in Frameworks */,
+				110000000000000000000002 /* CaptureFeature in Frameworks */,
+				110000000000000000000003 /* ImageEditorFeature in Frameworks */,
+				110000000000000000000004 /* ImageTranslationFeature in Frameworks */,
+				110000000000000000000005 /* ClipboardFeature in Frameworks */,
+				110000000000000000000006 /* ColorPickerFeature in Frameworks */,
+				110000000000000000000007 /* MacPlatform in Frameworks */,
+				110000000000000000000008 /* TextTranslationFeature in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		400000000000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				400000000000000000000002 /* isnipster-app */,
+				400000000000000000000006 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		400000000000000000000002 /* isnipster-app */ = {
+			isa = PBXGroup;
+			children = (
+				200000000000000000000001 /* iSnipsterApp.swift */,
+				400000000000000000000003 /* Application */,
+				400000000000000000000005 /* Resources */,
+				400000000000000000000004 /* UI */,
+			);
+			path = "isnipster-app";
+			sourceTree = "<group>";
+		};
+		400000000000000000000003 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				200000000000000000000002 /* AppDelegate.swift */,
+				200000000000000000000024 /* StatusBarController.swift */,
+				200000000000000000000025 /* CaptureWorkflowCoordinator.swift */,
+				200000000000000000000003 /* AppModel.swift */,
+				200000000000000000000023 /* AppShortcutStore.swift */,
+				200000000000000000000022 /* HotKeyDisplay.swift */,
+				200000000000000000000021 /* AppShortcutAction.swift */,
+				200000000000000000000004 /* CompositionRoot.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		400000000000000000000004 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				400000000000000000000007 /* MenuBar */,
+				400000000000000000000009 /* Onboarding */,
+				400000000000000000000008 /* Settings */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		400000000000000000000005 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				200000000000000000000010 /* Assets.xcassets */,
+				200000000000000000000011 /* PrivacyInfo.xcprivacy */,
+				200000000000000000000007 /* Info.plist */,
+				200000000000000000000008 /* iSnipster.entitlements */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		400000000000000000000006 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				200000000000000000000009 /* iSnipster Dev.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		400000000000000000000007 /* MenuBar */ = {
+			isa = PBXGroup;
+			children = (
+				200000000000000000000005 /* MenuBarContentView.swift */,
+			);
+			path = MenuBar;
+			sourceTree = "<group>";
+		};
+		400000000000000000000008 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				200000000000000000000006 /* SettingsView.swift */,
+				200000000000000000000020 /* SettingsView+About.swift */,
+				200000000000000000000019 /* SettingsView+Shortcuts.swift */,
+				200000000000000000000018 /* SettingsView+Privacy.swift */,
+				200000000000000000000017 /* SettingsView+Translation.swift */,
+				200000000000000000000016 /* SettingsView+General.swift */,
+				200000000000000000000015 /* HotKeyRecorder.swift */,
+				200000000000000000000014 /* SettingsComponents.swift */,
+				200000000000000000000013 /* SettingsView+Clipboard.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		400000000000000000000009 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				200000000000000000000012 /* OnboardingView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		500000000000000000000001 /* iSnipster */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 900000000000000000000002 /* Build configuration list for PBXNativeTarget "iSnipster" */;
+			buildPhases = (
+				300000000000000000000002 /* Sources */,
+				300000000000000000000001 /* Frameworks */,
+				300000000000000000000003 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iSnipster;
+			packageProductDependencies = (
+				700000000000000000000001 /* iSnipsterCore */,
+				700000000000000000000002 /* CaptureFeature */,
+				700000000000000000000003 /* ImageEditorFeature */,
+				700000000000000000000004 /* ImageTranslationFeature */,
+				700000000000000000000005 /* ClipboardFeature */,
+				700000000000000000000006 /* ColorPickerFeature */,
+				700000000000000000000007 /* MacPlatform */,
+				700000000000000000000008 /* TextTranslationFeature */,
+			);
+			productName = iSnipster;
+			productReference = 200000000000000000000009 /* iSnipster Dev.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		600000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 2700;
+				TargetAttributes = {
+					500000000000000000000001 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = 900000000000000000000001 /* Build configuration list for PBXProject "iSnipster" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = zh_CN;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				zh_CN,
+				en,
+			);
+			mainGroup = 400000000000000000000001;
+			packageReferences = (
+				800000000000000000000001 /* XCLocalSwiftPackageReference "Packages/isnipster-kit" */,
+			);
+			productRefGroup = 400000000000000000000006 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				500000000000000000000001 /* iSnipster */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		300000000000000000000003 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				100000000000000000000007 /* Assets.xcassets in Resources */,
+				100000000000000000000008 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		300000000000000000000002 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				100000000000000000000001 /* iSnipsterApp.swift in Sources */,
+				100000000000000000000002 /* AppDelegate.swift in Sources */,
+				100000000000000000000024 /* StatusBarController.swift in Sources */,
+				100000000000000000000025 /* CaptureWorkflowCoordinator.swift in Sources */,
+				100000000000000000000003 /* AppModel.swift in Sources */,
+				100000000000000000000004 /* CompositionRoot.swift in Sources */,
+				100000000000000000000005 /* MenuBarContentView.swift in Sources */,
+				100000000000000000000006 /* SettingsView.swift in Sources */,
+				100000000000000000000023 /* AppShortcutStore.swift in Sources */,
+				100000000000000000000022 /* HotKeyDisplay.swift in Sources */,
+				100000000000000000000021 /* AppShortcutAction.swift in Sources */,
+				100000000000000000000020 /* SettingsView+About.swift in Sources */,
+				100000000000000000000019 /* SettingsView+Shortcuts.swift in Sources */,
+				100000000000000000000018 /* SettingsView+Privacy.swift in Sources */,
+				100000000000000000000017 /* SettingsView+Translation.swift in Sources */,
+				100000000000000000000016 /* SettingsView+General.swift in Sources */,
+				100000000000000000000015 /* HotKeyRecorder.swift in Sources */,
+				100000000000000000000014 /* SettingsComponents.swift in Sources */,
+				100000000000000000000013 /* SettingsView+Clipboard.swift in Sources */,
+				100000000000000000000009 /* OnboardingView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A00000000000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 25A4STZB9M;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A00000000000000000000002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 25A4STZB9M;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		A00000000000000000000003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APP_DISPLAY_NAME = "iSnipster Dev";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "isnipster-app/Resources/iSnipster.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "isnipster-app/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.isnipster.app.debug;
+				PRODUCT_MODULE_NAME = iSnipster;
+				PRODUCT_NAME = "iSnipster Dev";
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		A00000000000000000000004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APP_DISPLAY_NAME = iSnipster;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "isnipster-app/Resources/iSnipster.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "isnipster-app/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.isnipster.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		900000000000000000000001 /* Build configuration list for PBXProject "iSnipster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A00000000000000000000001 /* Debug */,
+				A00000000000000000000002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		900000000000000000000002 /* Build configuration list for PBXNativeTarget "iSnipster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A00000000000000000000003 /* Debug */,
+				A00000000000000000000004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		800000000000000000000001 /* XCLocalSwiftPackageReference "Packages/isnipster-kit" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "Packages/isnipster-kit";
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		700000000000000000000001 /* iSnipsterCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 800000000000000000000001 /* XCLocalSwiftPackageReference "Packages/isnipster-kit" */;
+			productName = iSnipsterCore;
+		};
+		700000000000000000000002 /* CaptureFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 800000000000000000000001 /* XCLocalSwiftPackageReference "Packages/isnipster-kit" */;
+			productName = CaptureFeature;
+		};
+		700000000000000000000003 /* ImageEditorFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 800000000000000000000001 /* XCLocalSwiftPackageReference "Packages/isnipster-kit" */;
+			productName = ImageEditorFeature;
+		};
+		700000000000000000000004 /* ImageTranslationFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 800000000000000000000001 /* XCLocalSwiftPackageReference "Packages/isnipster-kit" */;
+			productName = ImageTranslationFeature;
+		};
+		700000000000000000000005 /* ClipboardFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 800000000000000000000001 /* XCLocalSwiftPackageReference "Packages/isnipster-kit" */;
+			productName = ClipboardFeature;
+		};
+		700000000000000000000006 /* ColorPickerFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 800000000000000000000001 /* XCLocalSwiftPackageReference "Packages/isnipster-kit" */;
+			productName = ColorPickerFeature;
+		};
+		700000000000000000000007 /* MacPlatform */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 800000000000000000000001 /* XCLocalSwiftPackageReference "Packages/isnipster-kit" */;
+			productName = MacPlatform;
+		};
+		700000000000000000000008 /* TextTranslationFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 800000000000000000000001 /* XCLocalSwiftPackageReference "Packages/isnipster-kit" */;
+			productName = TextTranslationFeature;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 600000000000000000000001 /* Project object */;
+}
