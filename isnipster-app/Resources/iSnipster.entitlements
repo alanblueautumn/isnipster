@@ -8,6 +8,12 @@ Xcode 的 CODE_SIGN_ENTITLEMENTS 指向这里；更改能力需要重新签名�
 	<!-- 启用 App Sandbox，限制文件与系统资源访问；不是屏幕录制授权开关。 -->
 	<key>com.apple.security.app-sandbox</key>
 	<true/>
+	<!-- 辅助功能授权 API 需要连接系统提示服务，否则会被沙盒拦截，无法登记到授权列表。
+	     这里只允许提示服务通信，不授予辅助功能权限；仍需用户在系统设置中确认。 -->
+	<key>com.apple.security.temporary-exception.mach-lookup.global-name</key>
+	<array>
+		<string>com.apple.universalaccessAuthWarn</string>
+	</array>
 	<!-- 允许访问用户通过系统选择机制授予的文件；不表示可以任意读取整个磁盘。 -->
 	<key>com.apple.security.files.user-selected.read-write</key>
 	<true/>

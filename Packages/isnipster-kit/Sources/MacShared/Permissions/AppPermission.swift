@@ -44,14 +44,19 @@ public enum AppPermission: Sendable, Hashable {
             // CGRequestScreenCaptureAccess 是触发系统录屏授权流程的 CoreGraphics API；它不提供 await 回调。
             return CGRequestScreenCaptureAccess()
         case .directPaste:
-            // 发送键盘事件的授权弹窗同样由系统管理，返回后重新读取状态，而不是相信请求函数的返回值。
-            _ = CGRequestPostEventAccess()
+            // 显式请求辅助功能信任，让系统识别当前应用并提供授权入口。
+            // 请求异步显示提示，不代表用户已经同意；仍以系统实时状态为准。
+            Self.requestAccessibilityTrust()
             return isGranted
         }
     }
 
     @MainActor
     public func openSystemSettings() {
+        if self == .directPaste {
+            // 打开设置深链本身不会登记应用。用户主动进入授权页时，先向系统发起信任请求。
+            Self.requestAccessibilityTrust()
+        }
         // x-apple.systempreferences 是 Apple 定义的深链，不是网页 URL；NSWorkspace 交给系统打开对应设置页。
         let pane = self == .screenCapture ? "Privacy_ScreenCapture" : "Privacy_Accessibility"
         guard let url = URL(string: "x-apple.systempreferences:com.apple.preference.security?\(pane)") else {
@@ -59,6 +64,14 @@ public enum AppPermission: Sendable, Hashable {
         }
         // 交给 macOS 选择 URL 对应的处理程序；可以打开网页或系统设置深链，不是应用内 HTTP 请求。
         NSWorkspace.shared.open(url)
+    }
+
+    @MainActor
+    private static func requestAccessibilityTrust() {
+        guard !AXIsProcessTrusted() else { return }
+        // 使用 kAXTrustedCheckOptionPrompt 对应的键值，避免 Swift 6 并发检查读取 C 的可变全局变量。
+        let options = ["AXTrustedCheckOptionPrompt": true] as CFDictionary
+        _ = AXIsProcessTrustedWithOptions(options)
     }
 }
 
